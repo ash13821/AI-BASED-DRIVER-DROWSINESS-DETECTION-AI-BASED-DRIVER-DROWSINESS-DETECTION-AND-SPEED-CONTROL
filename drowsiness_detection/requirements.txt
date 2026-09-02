@@ -1,0 +1,13 @@
+# drowsiness_detection module requirements
+#
+# This module only consumes numeric facial features (dicts of floats/bools)
+# from the facial_analysis module -- it does not touch the camera or do any
+# image processing itself. As a result it has NO third-party dependencies;
+# everything it uses (dataclasses, collections, time, typing, unittest) is
+# in the Python 3.12 standard library.
+#
+# This file is intentionally left with no pinned packages. If a future
+# real-time test script (connecting camera -> facial_analysis ->
+# drowsiness_detection) is added, ITS dependencies (e.g. opencv-python,
+# mediapipe) belong in facial_analysis/requirements.txt or a separate
+# integration-test requirements file, not here.
